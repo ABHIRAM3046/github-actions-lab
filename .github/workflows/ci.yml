@@ -1,0 +1,22 @@
+name: First Pipeline
+
+on:
+  push:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Print Message
+        run: echo "Hello Abhiram from GitHub Actions"
+
+      - name: Show Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
+
