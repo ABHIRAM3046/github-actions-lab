@@ -28,3 +28,6 @@ jobs:
       - name: Print Success 
         run: echo "CI Pipeline Running Successfully"
 
+      - name: Fail Step
+        run: exit 1
+
