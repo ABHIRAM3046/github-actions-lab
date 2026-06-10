@@ -28,6 +28,10 @@ jobs:
       - name: Print Success 
         run: echo "CI Pipeline Running Successfully"
 
-      - name: Fail Step
-        run: exit 1
-
+      - name: Show Environment Variables
+        env:
+          APP_NAME: Resume Builder
+          ENVIRONMENT: Dev
+        run: |
+          echo $APP_NAME
+          echo $ENVIRONMENT
