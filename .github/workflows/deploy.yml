@@ -1,0 +1,30 @@
+name: Build and Deploy
+
+on:
+  push:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - name: Build Stage
+        run: echo "Application Built"
+
+  deploy:
+
+    needs: build
+
+    if: github.ref == 'refs/heads/main'
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Deploy Stage
+        run: echo "Application Deployed"
