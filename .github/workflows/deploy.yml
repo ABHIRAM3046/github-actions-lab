@@ -1,3 +1,4 @@
+
 name: Build and Deploy
 
 on:
@@ -15,6 +16,9 @@ jobs:
 
       - name: Build Stage
         run: echo "Application Built"
+
+      - name: Exit failure
+        run: exit 1
 
   deploy:
 
